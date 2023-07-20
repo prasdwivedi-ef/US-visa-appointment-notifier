@@ -1,13 +1,13 @@
 module.exports = {
   loginCred:{
-    EMAIL: process.env.EMAIL,
-    PASSWORD: process.env.PASSWORD
+    EMAIL: 'prashantdwivedi.sfdc@gmail.com',
+    PASSWORD: '^4D1JwVO44RSHIoD'
   },
 
   siteInfo: {
-    COUNTRY_CODE: process.env.COUNTRY_CODE || 'en-ca',
-    SCHEDULE_ID: process.env.SCHEDULE_ID,
-    FACILITY_ID: process.env.FACILITY_ID,
+    COUNTRY_CODE: 'en-gb',
+    SCHEDULE_ID: '50483002',
+    FACILITY_ID: '17',
 
     get APPOINTMENTS_JSON_URL(){
       return `https://ais.usvisa-info.com/${this.COUNTRY_CODE}/niv/schedule/${this.SCHEDULE_ID}/appointment/days/${this.FACILITY_ID}.json?appointments%5Bexpedite%5D=false`
@@ -20,12 +20,12 @@ module.exports = {
   IS_PROD: process.env.NODE_ENV === 'prod',
   NEXT_SCHEDULE_POLL: process.env.NEXT_SCHEDULE_POLL || 30_000, // default to 30 seconds
   MAX_NUMBER_OF_POLL: process.env.MAX_NUMBER_OF_POLL || 250, // number of polls before stopping
-  NOTIFY_ON_DATE_BEFORE: process.env.NOTIFY_ON_DATE_BEFORE, // in ISO format i.e YYYY-MM-DD
+  NOTIFY_ON_DATE_BEFORE: '2023-12-15', // in ISO format i.e YYYY-MM-DD
 
-  NOTIFY_EMAILS: process.env.NOTIFY_EMAILS, // comma separated list of emails
+  NOTIFY_EMAILS: 'prashantdwivedi.sfdc@gmail.com', // comma separated list of emails
   mailgun: {
-    USERNAME: process.env.MAILGUN_USERNAME,
-    DOMAIN: process.env.MAILGUN_DOMAIN,
-    API_KEY: process.env.MAILGUN_API_KEY,
+    USERNAME: 'prashantdwivedi.sfdc@gmail.com',
+    DOMAIN: 'sandbox1a4569e8241644108c36e4da1201758b.mailgun.org',
+    API_KEY: 'key-ced649bd9fc7e638f60c210b594fc828',
   }
 }
