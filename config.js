@@ -18,9 +18,9 @@ module.exports = {
     }
   },
   IS_PROD: process.env.NODE_ENV === 'prod',
-  NEXT_SCHEDULE_POLL: process.env.NEXT_SCHEDULE_POLL || 30_000, // default to 30 seconds
+  NEXT_SCHEDULE_POLL: process.env.NEXT_SCHEDULE_POLL || 60_000, // default to 30 seconds
   MAX_NUMBER_OF_POLL: process.env.MAX_NUMBER_OF_POLL || 250, // number of polls before stopping
-  NOTIFY_ON_DATE_BEFORE: '2023-12-15', // in ISO format i.e YYYY-MM-DD
+  NOTIFY_ON_DATE_BEFORE: '2023-08-31', // in ISO format i.e YYYY-MM-DD
 
   NOTIFY_EMAILS: 'prashantdwivedi.sfdc@gmail.com', // comma separated list of emails
   mailgun: {
